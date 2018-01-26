@@ -14,11 +14,21 @@ const Container = styled.div`
   background-size: contain;
 `;
 
+const A = styled.a`
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(0, 0, 200, 0.5);
+  opacity: 0.5;
+`;
+
 class App extends Component {
   render() {
     return (
       <Container>
-        <a href="/weddinginvite/">Wedding Invitation</a>
+        <A href="/weddinginvite/">Wedding Invitation</A>
       </Container>
     );
   }
