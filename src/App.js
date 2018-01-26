@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <a href="/weddinginvite">Wedding Invitation</a>
+        <a href="/weddinginvite/">Wedding Invitation</a>
       </Container>
     );
   }
