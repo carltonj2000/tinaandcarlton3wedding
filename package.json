@@ -15,7 +15,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "find": "node scripts/find.js",
-    "rsync": "rsync -avzL build/ carltonjoseph.com:/mnt/volume-sfo2-01/cj/tinaandcarltondotcom/wedding",
+    "rsync":
+      "rsync -avzL ./ carltonjoseph.com:/mnt/volume-sfo2-01/cj/tinaandcarltondotcom/wedding/",
     "toserver": "npm run build && npm run rsync",
     "start:server": "node server.js",
     "docker:build": "docker build -t wedding .",
