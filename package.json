@@ -16,7 +16,7 @@
     "eject": "react-scripts eject",
     "find": "node scripts/find.js",
     "rsync":
-      "rsync -avzL --exclude 'node_modules' ./ carltonj2000@carltonjoseph.com:/mnt/volume-sfo2-01/cj/tinaandcarltondotcom/wedding/",
+      "rsync -avzL --exclude='node_modules' --exclude='.git' ./ carltonj2000@carltonjoseph.com:/mnt/volume-sfo2-01/cj/tinaandcarltondotcom/wedding/",
     "toserver": "npm run build && npm run rsync",
     "start:server": "node server.js",
     "docker:build": "docker build -t wedding .",
