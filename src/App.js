@@ -6,7 +6,6 @@ const lakeLv1 = require("./images/374412058721534514.jpg");
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   background: url(${lakeLv1});
   height: 100vh;
   background-repeat: no-repeat;
@@ -28,6 +27,7 @@ class App extends Component {
   render() {
     return (
       <Container>
+        <A href="https://tinaandcarlton.com/honeymoon/">Honeymoon Pics</A>
         <A href="https://tinaandcarlton.com/weddinginvite/">
           Wedding Invitation
         </A>
