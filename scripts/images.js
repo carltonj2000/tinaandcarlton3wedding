@@ -78,22 +78,22 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       dir: getDir("2").location.dir,
       description: getDir("2").description,
       images: [
-        { file: "untitled(2of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(8of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(13of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(15of170)-Edit.jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(33of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(40of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(50of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(56of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(73of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(74of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(127of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(129of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(136of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(138of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(154of170).jpg", groups: ["Lake Las Vegas"] },
-        { file: "untitled(160of170).jpg", groups: ["Lake Las Vegas"] }
+        { file: "untitled(2of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(8of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(13of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(15of170)-Edit.jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(33of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(40of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(50of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(56of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(73of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(74of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(127of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(129of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(136of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(138of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(154of170).jpg", groups: ["lakelasvegas"] },
+        { file: "untitled(160of170).jpg", groups: ["lakelasvegas"] }
       ]
     }
   ];

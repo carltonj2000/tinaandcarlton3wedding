@@ -23,7 +23,8 @@ const gen = sz => {
       .replace("(", "_")
       .replace(")", "_")
       .replace("[", "_")
-      .replace("]", "_");
+      .replace("]", "_")
+      .replace("-", "_");
     imgConst.push(
       `const ${baseName}_${sz} = require("../images/resized/size_${sz}/${
         image.file
@@ -35,7 +36,7 @@ const gen = sz => {
         return `${a} "${group}" ${i === last ? "" : ","}`;
       }, "[") + "]";
     imgExports.push(
-      `{ name: ${baseName}_${sz}, description: "${
+      `{ name: ${baseName}_${sz}, file: "${baseName}", description: "${
         image.description
       }", groups: ${groups} },`
     );
