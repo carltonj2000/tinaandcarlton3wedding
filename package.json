@@ -14,7 +14,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "find": "node scripts/find.js",
+    "img-convert": "node ./scripts/img-convert.js",
+    "img-link": "node ./scripts/img-link.js",
+    "img-gen-req": "node ./scripts/img-gen-req.js",
+    "img-convert-db": "node --inspect-brk ./scripts/img-convert.js",
+    "img-link-db": "node --inspect-brk ./scripts/img-link.js",
+    "img-gen-req-db": "node --inspect-brk ./scripts/img-gen-req.js",
     "rsync":
       "rsync -avzL --exclude='node_modules' --exclude='.git' ./ carltonj2000@carltonjoseph.com:/mnt/volume-sfo2-01/cj/tinaandcarltondotcom/wedding/",
     "toserver": "npm run build && npm run rsync",
