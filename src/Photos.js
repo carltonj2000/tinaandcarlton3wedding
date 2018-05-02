@@ -28,14 +28,12 @@ class PhotosComponent extends React.Component {
     return (
       <Photos>
         {images.map((img, idx) => (
-          <div key={`${idx}`}>
-            <p style={{ fontSize: "8px" }}>{img.file}</p>
-            <Img
-              src={img.name}
-              alt={img.description}
-              onClick={() => photoModalOpen(idx)}
-            />
-          </div>
+          <Img
+            src={img.name}
+            key={`${idx}`}
+            alt={img.description}
+            onClick={() => photoModalOpen(idx)}
+          />
         ))}
       </Photos>
     );

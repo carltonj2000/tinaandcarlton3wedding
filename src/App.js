@@ -5,7 +5,8 @@ const lakeLv1 = require("./images/374412058721534514.jpg");
 
 const Container = {
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
+  justifyContent: "center",
   background: `url(${lakeLv1})`,
   height: "100vh",
   backgroundRepeat: "no-repeat",
@@ -14,21 +15,14 @@ const Container = {
 };
 
 const A = {
-  width: "100%",
   textAlign: "center",
-  fontWeight: "bold",
-  paddingTop: "10px",
-  paddingBottom: "10px",
-  background: "rgba(0, 0, 200, 0.5)",
-  opacity: "0.5"
+  opacity: "0.5",
+  margin: "10px"
 };
 
 class App extends Component {
-  state = { showPhotos: true };
-  showPhotos = e => {
-    console.log("here");
-    this.setState({ showPhotos: true });
-  };
+  state = { showPhotos: false };
+  showPhotos = e => this.setState({ showPhotos: true });
   render() {
     const { showPhotos } = this.state;
     return (

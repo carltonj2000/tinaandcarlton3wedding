@@ -10,6 +10,8 @@ import {
   images_1620x1080 as images
 } from "./utils/images";
 
+const last = images.length - 2;
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,8 +23,8 @@ const Container = styled.div`
 class Home extends Component {
   state = {
     isOpen: false,
-    img: imagesMedium[0],
-    imgIdx: 0,
+    img: imagesMedium[last],
+    imgIdx: last,
     hd: false,
     imagesSmall,
     imagesMedium,
