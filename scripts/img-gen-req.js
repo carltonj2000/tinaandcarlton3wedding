@@ -38,7 +38,7 @@ const gen = sz => {
     imgExports.push(
       `{ name: ${baseName}_${sz}, file: "${baseName}", description: "${
         image.description
-      }", groups: ${groups} },`
+      }", groups: ${groups}${image.portrait ? ", portrait : true" : ""}},`
     );
   }, []);
 };

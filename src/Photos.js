@@ -7,9 +7,15 @@ const Photos = styled.div`
   width: 100%;
   grid-gap: 3px;
   grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+  grid-auto-flow: dense;
 `;
 
+const Div = styled.div``;
+const DivPort = styled.div`
+  grid-row-end: span 2;
+`;
 const Img = styled.img`
+  margin: auto;
   width: 100%;
 `;
 
@@ -27,14 +33,31 @@ class PhotosComponent extends React.Component {
     }
     return (
       <Photos>
-        {images.map((img, idx) => (
-          <Img
-            src={img.name}
-            key={`${idx}`}
-            alt={img.description}
-            onClick={() => photoModalOpen(idx)}
-          />
-        ))}
+        {images.map((img, idx) => {
+          if (img.portrait) {
+            return (
+              <DivPort>
+                <Img
+                  src={img.name}
+                  key={`${idx}`}
+                  alt={img.description}
+                  onClick={() => photoModalOpen(idx)}
+                />
+              </DivPort>
+            );
+          } else {
+            return (
+              <Div>
+                <Img
+                  src={img.name}
+                  key={`${idx}`}
+                  alt={img.description}
+                  onClick={() => photoModalOpen(idx)}
+                />
+              </Div>
+            );
+          }
+        })}
       </Photos>
     );
   }
