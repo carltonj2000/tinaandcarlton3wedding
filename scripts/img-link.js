@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require("path");
 const { execSync, mkdirSync } = require("child_process");
 
-const images = require("./images")();
+const images = require("./images")(process.argv[2]);
 
 const sizes = ["1620x1080", "405x270", "81x54"];
 

@@ -1,9 +1,12 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const morgan = require("morgan");
 
-app.use(morgan("combined"));
+const debug = false; // enable logging during debug
+if (debug) {
+  const morgan = require("morgan");
+  app.use(morgan("combined"));  
+}
 
 app.use(express.static(path.join(__dirname, "build")));
 

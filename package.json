@@ -15,7 +15,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "img-convert": "node ./scripts/img-convert.js",
-    "img-link": "node ./scripts/img-link.js",
+    "img-link": "node ./scripts/img-link.js workstation",
     "img-gen-req": "node ./scripts/img-gen-req.js",
     "img-convert-db": "node --inspect-brk ./scripts/img-convert.js",
     "img-link-db": "node --inspect-brk ./scripts/img-link.js",
@@ -33,6 +33,7 @@
     "local:api": "concurrently \"npm run start\" \"npm run view:local:api\"",
     "docker:api": "concurrently \"npm run view:docker:api\""
   },
-  "homepagelocal": "https://tinaandcarltonhome.com/wedding",
+  "homepagehomedo": "http://localhost:8080/wedding",
+  "homepage": "http://localhost:8080/wedding",
   "homepageweb": "https://tinaandcarlton.com/wedding"
 }

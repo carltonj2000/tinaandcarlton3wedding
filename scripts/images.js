@@ -1,8 +1,11 @@
 const path = require("path");
 const fs = require("fs");
 
-module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
-  host = "CARLTONs-MacBook-Pro.local";
+module.exports = machine => {
+  if (!machine) {
+    console.log("Enter a machine value");
+    process.exit(-1);
+  }
   const imageDirsAll = [
     {
       index: "1", // could be uuid but incrementing for now
@@ -16,7 +19,9 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
         },
         {
           machine: "workstation",
-          dir: "tbd"
+          dir:
+            "/home/carltonj2000/cj/mounts/local/cj1Tera4/cj1Tera3/carltonData/cj_pics/pics2018/wedding/weddingChapelPro/High_Resolution",
+          description: "'workstation drive"
         }
       ]
     },
@@ -29,13 +34,19 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
           dir:
             "/Volumes/cj1Tera3/carltonData/cj_pics/pics2018/wedding/weddingDayPhotographer/carltontina-photo-download-part1of1/highlights",
           description: "'workstation mapped directory on the MBP'"
+        },
+        {
+          machine: "workstation",
+          dir:
+            "/home/carltonj2000/cj/mounts/local/cj1Tera4/cj1Tera3/carltonData/cj_pics/pics2018/wedding/weddingDayPhotographer/carltontina-photo-download-part1of1/highlights",
+          description: "'workstation drive"
         }
       ]
     }
   ];
 
   const imageDir = imageDirsAll.reduce((a, d) => {
-    const location = d.locations.filter(l => l.machine === host);
+    const location = d.locations.filter(l => l.machine === machine);
     delete d.locations;
     d.location = location[0];
     a.push(d);
