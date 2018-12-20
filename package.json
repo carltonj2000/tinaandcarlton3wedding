@@ -23,6 +23,7 @@
     "img-gen-req-db": "node --inspect-brk ./scripts/img-gen-req.js",
     "rsync": "rsync -avzL --exclude='node_modules' --exclude='.git' ./ carltonj2000@carltonjoseph.com:/mnt/volume-sfo2-01/cj/tinaandcarltondotcom/wedding/",
     "rsync:mntssd": "rsync -a build/ /Volumes/cjs/cj/volume_sfo2_02/cj/tinaandcarlton/wedding/",
+    "rsync:dolocal": "rsync -a build/ /mnt/volume_sfo2_02/cj/tinaandcarlton/wedding/",
     "toserver": "npm run build && npm run rsync",
     "start:server": "node server.js",
     "docker:build": "docker build -t wedding .",
