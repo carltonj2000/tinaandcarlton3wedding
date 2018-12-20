@@ -1,7 +1,13 @@
 const path = require("path");
 const fs = require("fs");
 
-module.exports = machine => {
+const cmbpl = "/Volumes/cjs/cj/volume_sfo2_02/cj_pics/pics2018/wedding/";
+/* carlton's macbook pro mout of the server, cp line below, ln line above */
+//const cmbpl = "/Volumes/cj1Tera3/carltonData/cj_pics/pics2018/wedding/";
+const wrkstation =
+  "/home/carltonj2000/cj/mounts/local/cj1Tera4/cj1Tera3/carltonData/cj_pics/pics2018/wedding/";
+
+module.exports = (machine, chkImgExists = true) => {
   if (!machine) {
     console.log("Enter a machine value");
     process.exit(-1);
@@ -13,14 +19,12 @@ module.exports = machine => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir:
-            "/Volumes/cj1Tera3/carltonData/cj_pics/pics2018/wedding/weddingChapelPro/High_Resolution",
+          dir: cmbpl + "weddingChapelPro/High_Resolution",
           description: "'workstation mapped directory on the MBP'"
         },
         {
           machine: "workstation",
-          dir:
-            "/home/carltonj2000/cj/mounts/local/cj1Tera4/cj1Tera3/carltonData/cj_pics/pics2018/wedding/weddingChapelPro/High_Resolution",
+          dir: wrkstation + "weddingChapelPro/High_Resolution",
           description: "'workstation drive"
         }
       ]
@@ -32,13 +36,15 @@ module.exports = machine => {
         {
           machine: "CARLTONs-MacBook-Pro.local",
           dir:
-            "/Volumes/cj1Tera3/carltonData/cj_pics/pics2018/wedding/weddingDayPhotographer/carltontina-photo-download-part1of1/highlights",
+            cmbpl +
+            "weddingDayPhotographer/carltontina-photo-download-part1of1/highlights",
           description: "'workstation mapped directory on the MBP'"
         },
         {
           machine: "workstation",
           dir:
-            "/home/carltonj2000/cj/mounts/local/cj1Tera4/cj1Tera3/carltonData/cj_pics/pics2018/wedding/weddingDayPhotographer/carltontina-photo-download-part1of1/highlights",
+            wrkstation +
+            "weddingDayPhotographer/carltontina-photo-download-part1of1/highlights",
           description: "'workstation drive"
         }
       ]
@@ -165,7 +171,7 @@ module.exports = machine => {
   };
 
   uniqueIndex();
-  imagesExists(images);
+  if (chkImgExists) imagesExists(images);
 
   return images;
 };

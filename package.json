@@ -17,11 +17,12 @@
     "img-convert": "node ./scripts/img-convert.js",
     "img-link": "node ./scripts/img-link.js workstation",
     "img-gen-req": "node ./scripts/img-gen-req.js",
+    "img:cp": "node ./scripts/img-cp.js",
     "img-convert-db": "node --inspect-brk ./scripts/img-convert.js",
     "img-link-db": "node --inspect-brk ./scripts/img-link.js",
     "img-gen-req-db": "node --inspect-brk ./scripts/img-gen-req.js",
-    "rsync":
-      "rsync -avzL --exclude='node_modules' --exclude='.git' ./ carltonj2000@carltonjoseph.com:/mnt/volume-sfo2-01/cj/tinaandcarltondotcom/wedding/",
+    "rsync": "rsync -avzL --exclude='node_modules' --exclude='.git' ./ carltonj2000@carltonjoseph.com:/mnt/volume-sfo2-01/cj/tinaandcarltondotcom/wedding/",
+    "rsync:mntssd": "rsync -a build/ /Volumes/cjs/cj/volume_sfo2_02/cj/tinaandcarlton/wedding/",
     "toserver": "npm run build && npm run rsync",
     "start:server": "node server.js",
     "docker:build": "docker build -t wedding .",
@@ -34,6 +35,7 @@
     "docker:api": "concurrently \"npm run view:docker:api\""
   },
   "homepagehomedo": "http://localhost:8080/wedding",
-  "homepage": "http://localhost:8080/wedding",
-  "homepageweb": "https://tinaandcarlton.com/wedding"
+  "homepageweb": "https://tinaandcarlton.com/wedding",
+  "homepagelocal": "http://tinaandcarlton.test/wedding",
+  "homepage": "http://tinaandcarlton.test/wedding"
 }
