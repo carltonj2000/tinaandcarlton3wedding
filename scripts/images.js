@@ -1,8 +1,9 @@
 const path = require("path");
 const fs = require("fs");
 
-const cmbpl = "/Volumes/cjs/cj/volume_sfo2_02/cj_pics/pics2018/wedding/";
-/* carlton's macbook pro mout of the server, cp line below, ln line above */
+/* choose cmbpl based on image location */
+const cmbpl = "/mnt/volume_sfo2_02/cj_pics/pics2018/wedding/";
+//const cmbpl = "/Volumes/cjs/cj/volume_sfo2_02/cj_pics/pics2018/wedding/";
 //const cmbpl = "/Volumes/cj1Tera3/carltonData/cj_pics/pics2018/wedding/";
 const wrkstation =
   "/home/carltonj2000/cj/mounts/local/cj1Tera4/cj1Tera3/carltonData/cj_pics/pics2018/wedding/";
